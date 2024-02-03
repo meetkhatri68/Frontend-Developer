@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>What are all the looping structures in JavaScript?</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <script>
+        //for loop
+        for (let x = 2; x <= 4; x++) 
+        { 
+            console.log("Value of x: " + x); 
+        }
+        //while loop
+        let val = 1;  
+        while (val < 6) 
+        { 
+            console.log(val);  
+            val += 1; 
+        }
+        //do while loop
+        let test = 1; 
+        do 
+        { 
+            console.log(test); 
+            test++; 
+        } while(test <= 5)
+
+        //for in-loop
+        let myObj = { x: 1, y: 2, z: 3 }; 
+        for (let key in myObj)
+        { 
+	        console.log(key, myObj[key]); 
+        }   
+        
+        //for of-loop
+        let arr = [1, 2, 3, 4, 5]; 
+        for (let value of arr) 
+        { 
+            console.log(value); 
+        }
+
+        let sum = 0, a = 1; 
+
+// Label for outer loop 
+            outerloop: while (true) { 
+                a = 1; 
+
+            // Label for inner loop 
+            innerloop: while (a < 3) { 
+                sum += a; 
+                if (sum > 12) { 
+
+                    // Break outer loop from inner loop 
+                    break outerloop; 
+                } 
+                console.log("sum = " + sum); 
+                a++; 
+            } 
+        }
+
+        //break statement
+        for (let i = 1; i < 6; i++) 
+        { 
+            if (i == 4) 
+                break; 
+                
+            console.log(i); 
+        }
+
+        //Continue Statement
+
+        for (let i = 0; i < 11; i++) 
+        { 
+            if (i % 2 == 0) 
+                continue; 
+                
+            console.log(i); 
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

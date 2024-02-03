@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>How to read and write a file using JavaScript?</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <script>
+
+    var fs = require("fs"); 
+    console.log(" Writing into an file "); 
+
+    // Sample.txt is an empty file 
+    fs.writeFile( 
+    "sample.txt", 
+    "Let's write a few sentences in the file", 
+    function (err)
+     { 
+        if (err) 
+        { 
+            return console.error(err); 
+        } 
+
+        // If no error the remaining code executes 
+        console.log(" Finished writing "); 
+        console.log("Reading the data that's written"); 
+
+        // Reading the file 
+        fs.readFile("sample.txt", function (err, data) 
+     { 
+        if (err) 
+        { 
+            return console.error(err); 
+        } 
+        console.log("Data read : " + data.toString()); 
+            
+        }); 
+    } 
+    ); 
+
+
+
+
+    </script>
+
+</body>
+</html>

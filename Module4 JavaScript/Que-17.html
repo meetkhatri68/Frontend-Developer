@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>What are the disadvantages of using innerHTML in JavaScript?</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body style="text-align: center"> 
+
+	<p id="P"> 
+		A computer science 
+		portal for geeks. 
+	</p> 
+
+	<button onclick="geek()"> 
+		Try it 
+	</button> 
+
+	<p id="p"></p> 
+
+	<script> 
+		function geek() { 
+			var x = document.getElementById("P") 
+						.innerHTML; 
+			
+			document.getElementById("p") 
+						.innerHTML = x; 
+			
+			document.getElementById("p") 
+						.style.color = "green"; 
+		} 
+	</script> 
+</body>
+</html>
